@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex to Image Converter</title>
+    <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="assets/images/Devkit_Logo.png" alt="Logo">
+        </a>
+        <a href="index.html" class="home-link">HOME</a>
+        <h2 id="pageTitle">Hex to Image Converter</h2>
+    </header>
+    
+    <p>The “Hex to Image converter” is a smart tool that converts Hex values to Image. The process is simple: the converter decodes the Hex value into the original data, then encodes it to an image, giving you the final result almost instantly.</p>
+
+    <textarea id="hexData" placeholder="Paste your hexadecimal data here..."></textarea><br>
+    <button onclick="convertToImage()">Convert to Image</button>
+    <span id="error-message" class="error-message"></span>
+    
+    <div class="image-output">
+        <canvas id="imageCanvas"></canvas>
+        <div class="image-info">
+            <p style="font-weight: bold;">File Info</p>
+            <p id="imageResolution"></p>
+            <p id="imageSize"></p>
+            <p id="mimeType"></p>
+            <a id="downloadLink" href="#" download>Download Image</a>
+        </div>
+    </div>
+    <h3>How to Convert Hex to Image</h3>
+    <ol>
+        <li>Type or paste your hexadecimal value into the “Hex” field.</li>
+        <li>Press the “Convert to Image” button.</li>
+        <li>Download or copy the result.</li>
+    </ol>
+    <!-- Include Common JavaScript -->
+    <script src="js/services.js"></script>
+    <script>
+        document.getElementById('pageTitle').addEventListener('click', function() {
+            location.reload();
+        });
+    </script>
+</body>
+</html>

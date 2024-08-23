@@ -1,0 +1,152 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+
+header img {
+    align-items: end;
+    margin-left: 30px;
+    max-width: 150px;
+    height: auto;
+}
+
+header nav {
+    margin: 0;
+    align-items: end;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+header nav ul li {
+    margin-left: 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.tabs-section {
+    background: #e3f2fd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tab {
+    flex: 1 1 calc(33.333% - 20px);
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #039be5; 
+    border-radius: 8px;
+    background: #ffffff;
+    text-align: center;
+    color: #039be5; 
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 50px;
+}
+
+.tab:hover {
+    background: #039be5; 
+    color: #ffffff;
+    transform: scale(1.05); 
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); 
+}
+
+.tab::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.tab:hover::after {
+    border-color: #ffffff;
+}
+
+main {
+    padding: 20px 0;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+footer .contact_info {
+    margin-left: 40px;
+    text-align: start;
+}
+footer #copyRight {
+    margin-right: 40px;
+    text-align: end;
+}
+.linkedin-link {
+    color: #fff; 
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.linkedin-link:hover {
+    text-decoration: underline; 
+}
