@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex to Image Converter</title>
+    <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="assets/images/Devkit_Logo.png" alt="Logo">
+        </a>
+        <a href="index.html" class="home-link">HOME</a>
+        <h2 id="page2Title">Hex to Base64 Converter</h2>
+    </header>
+    
+    <p>The “Hex to Base64 converter” is a smart tool that converts Hex values to Base64. The process is simple: the converter decodes the Hex value into the original data, then encodes it to an Base64, giving you the final result almost instantly.</p>
+
+    <textarea id="hexaData" placeholder="Paste your hexadecimal data here..."></textarea><br>
+    <button onclick="convertToBase64()">Convert to Base64</button>
+    <span id="error-msg" class="error-msg"></span>
+    
+    <div class="base64-output">
+        <textarea id="base64Output" placeholder="Your Base64 is here..."></textarea><br>
+    </div>
+    <h3>How to Convert Hex to Base64</h3>
+    <ol>
+        <li>Type or paste your hexadecimal value into the “Hex” field.</li>
+        <li>Press the “Convert to Base64 button.</li>
+        <li>Download or copy the result.</li>
+    </ol>
+    <!-- Include Common JavaScript -->
+    <script src="js/services.js"></script>
+    <script>
+        document.getElementById('page2Title').addEventListener('click', function() {
+            location.reload();
+        });
+    </script>
+</body>
+</html>

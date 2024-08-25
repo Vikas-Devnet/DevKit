@@ -72,3 +72,38 @@ function createDownloadLink(canvas, format) {
     downloadLink.download = `image.${format}`;
     downloadLink.style.display = 'block';
 }
+
+function convertToBase64() {
+    debugger
+    var hexData = document.getElementById("hexaData").value.trim();
+    debugger
+    var errorMessage = document.getElementById("error-msg");
+    var base64Output = document.getElementById("base64Output");
+
+    errorMessage.style.display = "none";
+    document.getElementById("hexaData").classList.remove("textarea-error");
+
+    if (!hexData) {
+        errorMessage.textContent = "Field 'Hex' cannot be empty.";
+        errorMessage.style.display = "inline";
+        document.getElementById("hexaData").classList.add("textarea-error");
+        return;
+    }
+
+    try {
+        // Remove 0x prefix if exists
+        hexData = hexData.replace(/^0x/, '');
+        
+        // Convert hex to binary
+        var binaryData = new Uint8Array(hexData.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
+        
+        // Convert binary to Base64
+        var base64String = btoa(String.fromCharCode.apply(null, binaryData));
+        
+        // Display the Base64 result in the textarea
+        base64Output.value = base64String;
+    } catch (error) {
+        errorMessage.textContent = "Conversion Failed, Please check your hex data.";
+        errorMessage.style.display = "inline";
+    }
+}
